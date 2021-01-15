@@ -1,0 +1,19 @@
+jdbc:
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/warrior_repository
+  username: postgres
+  password: pass
+
+  hibernate:
+    hbm2ddl:
+      auto: create-drop
+    dialect: org.hibernate.dialect.MySQL5Dialect
+    connection:
+      pool_size: 3
+    show_sql: true
+    current_session_context_class: thread
+    dbcp:
+      initialSize: 5
+      maxTotal: 10
+      maxIdle: 5
+      minIdle: 1
