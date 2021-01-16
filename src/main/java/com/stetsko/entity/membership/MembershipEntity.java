@@ -1,4 +1,4 @@
-package com.stetsko.entity.member;
+package com.stetsko.entity.membership;
 
 import com.stetsko.entity.AbstractEntity;
 import lombok.AllArgsConstructor;
@@ -19,9 +19,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "membership")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Membership extends AbstractEntity {
+public class MembershipEntity extends AbstractEntity {
 
     @Column(name = "membership_name")
-    private String nameOfMembership;
+    private String name;
 
+
+    @Column(name = "description")
+    private String description;
 }
